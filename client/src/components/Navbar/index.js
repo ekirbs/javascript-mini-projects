@@ -1,7 +1,7 @@
 import React from "react";
-import "./style.css";
+import "./Navbar.css";
 
-const NavComponent = ({ currentPage, handlePageChange }) => { // this is doubling up on links, I have both a manual system and bootstrap links in place.
+const Navbar = ({ currentPage, handlePageChange }) => { // this is doubling up on links, I have both a manual system and bootstrap links in place.
   const expandBreakPoint = '1100px';
 
   return (
@@ -101,4 +101,4 @@ const NavComponent = ({ currentPage, handlePageChange }) => { // this is doublin
   );
 }
 
-export default NavComponent;
+export default Navbar;
