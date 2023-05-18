@@ -19,65 +19,39 @@ const Navbar = ({ currentPage, handlePageChange }) => { // this is doubling up o
           // className={currentPage === 'Home' ? 'header-title active' : 'header-title'}
           className="header-title"
         >
-          <img 
+          {/* <img 
             src={robotHead}
             alt="A robot's head."
-          />{' '}
+          />{' '} */}
           <h2 className="title">
-            <span className="title-first-line">Eric Kirberger </span>
+            <span className="title-first-line">JavaScript</span>
             <br></br>
-            <span className="title-second-line">Web Developer</span>
+            <span className="title-second-line">Mini Projects</span>
           </h2>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto nav-list">
             <Nav.Link
-              href="#portfolio"
-              onClick={() => handlePageChange('Portfolio')}
-              className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+              href="#home"
+              onClick={() => handlePageChange('Home')}
+              className={currentPage === 'Home' ? 'nav-link active' : 'nav-link'}
             >
-              Portfolio
-            </Nav.Link>
-            <Nav.Link
-              href="#resume"
-              onClick={() => handlePageChange('Resume')}
-              className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
-            >
-              Resume
+              Home
             </Nav.Link>
             <NavDropdown
               title="Fun Stuff"
               id="collasible-nav-dropdown"
               className="nav-list"
             >
-              <NavDropdown.Item>
-                <Nav.Link
-                  href="#lofi"
-                  onClick={() => handlePageChange('LoFi')}
-                  className={currentPage === 'LoFi' ? 'nav-link active' : 'nav-link'}
-                >
-                  Music Player
-                </Nav.Link>
-              </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>
                 <Nav.Link
-                  href="#weather"
-                  onClick={() => handlePageChange('Weather')}
-                  className={currentPage === 'Weather' ? 'nav-link active' : 'nav-link'}
+                  href="#project1"
+                  onClick={() => handlePageChange('Project1')}
+                  className={currentPage === 'Project1' ? 'nav-link active' : 'nav-link'}
                 >
-                  Weather Forecast
-                </Nav.Link>
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item>
-                <Nav.Link
-                  href="#map"
-                  onClick={() => handlePageChange('Map')}
-                  className={currentPage === 'Map' ? 'nav-link active' : 'nav-link'}
-                >
-                  Google Maps
+                  Project 1
                 </Nav.Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
