@@ -1,8 +1,8 @@
 import React from "react";
-import { Nav, NavDropdown } from "react-bootstrap";
-import "./Navbar.css";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "./NavComponent.css";
 
-const Navbar = ({ currentPage, handlePageChange }) => { // this is doubling up on links, I have both a manual system and bootstrap links in place.
+const NavComponent = ({ currentPage, handlePageChange }) => { // this is doubling up on links, I have both a manual system and bootstrap links in place.
   const expandBreakPoint = '1100px';
 
   return (
@@ -76,4 +76,4 @@ const Navbar = ({ currentPage, handlePageChange }) => { // this is doubling up o
   );
 }
 
-export default Navbar;
+export default NavComponent;
