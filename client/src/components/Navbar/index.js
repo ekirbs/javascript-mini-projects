@@ -1,4 +1,5 @@
 import React from "react";
+import { Nav, NavDropdown } from "react-bootstrap";
 import "./Navbar.css";
 
 const Navbar = ({ currentPage, handlePageChange }) => { // this is doubling up on links, I have both a manual system and bootstrap links in place.

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navbar } from "./components";
+import { Header, Navbar, Footer } from "./components";
 import { Home, Contact } from "./pages";
 import './App.css';
 
@@ -17,10 +17,10 @@ export default function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      <Header />
       <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
+      <Footer />
     </div>
   );
 }
