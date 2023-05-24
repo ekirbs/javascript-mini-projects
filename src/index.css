@@ -1,6 +1,8 @@
 :root {
   --primary: #424242;
   --secondary: #808080;
+  --lightPurple: #b388ff;
+  --deepPurple: #673ab7;
 }
 
 body {
