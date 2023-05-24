@@ -2,4 +2,7 @@
   width: 100vw;
   height: 60vh;
   background-color: var(--lightPurple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
