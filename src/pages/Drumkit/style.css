@@ -7,7 +7,7 @@
   align-items: center;
 
   font-size: 10px;
-  background: url('../images/savannah-background.jpg') bottom center;
+  background: url('./images/savannah-background.jpg') bottom center;
   background-size: cover;
 
   margin: 0;

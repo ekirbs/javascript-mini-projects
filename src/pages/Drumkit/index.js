@@ -31,54 +31,54 @@ export default function Drumkit() {
 
   return (
     <div className="drumkit">
-      <div class="keys">
-        <div data-key="65" class="key" id="clap">
+      <div className="keys">
+        <div data-key="65" className="key" id="clap">
           <kbd>A</kbd>
-          <span class="sound">clap</span>
+          <span className="sound">clap</span>
         </div>
-        <div data-key="83" class="key" id="hihat">
+        <div data-key="83" className="key" id="hihat">
           <kbd>S</kbd>
-          <span class="sound">hihat</span>
+          <span className="sound">hihat</span>
         </div>
-        <div data-key="68" class="key" id="kick">
+        <div data-key="68" className="key" id="kick">
           <kbd>D</kbd>
-          <span class="sound">kick</span>
+          <span className="sound">kick</span>
         </div>
-        <div data-key="70" class="key" id="openhat">
+        <div data-key="70" className="key" id="openhat">
           <kbd>F</kbd>
-          <span class="sound">openhat</span>
+          <span className="sound">openhat</span>
         </div>
-        <div data-key="71" class="key" id="boom">
+        <div data-key="71" className="key" id="boom">
           <kbd>G</kbd>
-          <span class="sound">boom</span>
+          <span className="sound">boom</span>
         </div>
-        <div data-key="72" class="key" id="ride">
+        <div data-key="72" className="key" id="ride">
           <kbd>H</kbd>
-          <span class="sound">ride</span>
+          <span className="sound">ride</span>
         </div>
-        <div data-key="74" class="key" id="snare">
+        <div data-key="74" className="key" id="snare">
           <kbd>J</kbd>
-          <span class="sound">snare</span>
+          <span className="sound">snare</span>
         </div>
-        <div data-key="75" class="key" id="tom">
+        <div data-key="75" className="key" id="tom">
           <kbd>K</kbd>
-          <span class="sound">tom</span>
+          <span className="sound">tom</span>
         </div>
-        <div data-key="76" class="key" id="tink">
+        <div data-key="76" className="key" id="tink">
           <kbd>L</kbd>
-          <span class="sound">tink</span>
+          <span className="sound">tink</span>
         </div>
       </div>
 
-      <audio data-key="65" src="./assets/sounds/percussion/clap.wav"></audio>
-      <audio data-key="83" src="./assets/sounds/percussion/hihat.wav"></audio>
-      <audio data-key="68" src="./assets/sounds/percussion/kick.wav"></audio>
-      <audio data-key="70" src="./assets/sounds/percussion/openhat.wav"></audio>
-      <audio data-key="71" src="./assets/sounds/percussion/boom.wav"></audio>
-      <audio data-key="72" src="./assets/sounds/percussion/ride.wav"></audio>
-      <audio data-key="74" src="./assets/sounds/percussion/snare.wav"></audio>
-      <audio data-key="75" src="./assets/sounds/percussion/tom.wav"></audio>
-      <audio data-key="76" src="./assets/sounds/percussion/tink.wav"></audio>
+      <audio data-key="65" src="/assets/sounds/percussion/clap.wav"></audio>
+      <audio data-key="83" src="/assets/sounds/percussion/hihat.wav"></audio>
+      <audio data-key="68" src="/assets/sounds/percussion/kick.wav"></audio>
+      <audio data-key="70" src="/assets/sounds/percussion/openhat.wav"></audio>
+      <audio data-key="71" src="/assets/sounds/percussion/boom.wav"></audio>
+      <audio data-key="72" src="/assets/sounds/percussion/ride.wav"></audio>
+      <audio data-key="74" src="/assets/sounds/percussion/snare.wav"></audio>
+      <audio data-key="75" src="/assets/sounds/percussion/tom.wav"></audio>
+      <audio data-key="76" src="/assets/sounds/percussion/tink.wav"></audio>
     </div>
   );
 }
