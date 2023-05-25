@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Navigation, Footer } from "./components";
-import { Home, Project1, Contact } from "./pages";
+import { Home, Drumkit, Contact } from "./pages";
 import './App.css';
 
 export default function App() {
@@ -13,7 +13,7 @@ export default function App() {
         <Navigation />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/project1" element={<Project1 />} />
+          <Route path="/drumkit" element={<Drumkit />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

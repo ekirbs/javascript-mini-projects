@@ -15,7 +15,7 @@ export default function Navigation() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <NavDropdown title="Projects" id="collasible-nav-dropdown">
-              <NavDropdown.Item as={Link} to="/project1">Project 1</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/drumkit">Drumkit</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
