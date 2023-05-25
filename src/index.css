@@ -1,9 +1,12 @@
 :root {
   --primary: #424242;
   --secondary: #808080;
+  --black: black;
+  --white: white;
   --lightPurple: #b388ff;
   --deepPurple: #673ab7;
   --drumYellow: #ffc600;
+  --bisque: bisque;
 }
 
 body {

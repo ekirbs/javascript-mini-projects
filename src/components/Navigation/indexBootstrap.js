@@ -7,7 +7,7 @@ import "./style.css";
 
 export default function Navigation() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className="navigation">
       <Container>
         <Navbar.Brand as={Link} to="/">JavaScript Mini Projects</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
