@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./style.css";
 
 export default function Drumkit() {
+  const keysContainerRef = useRef(null);
+
   useEffect(() => {
     const keys = Array.from(document.querySelectorAll(".key"));
-    // const audioElements = Array.from(document.querySelectorAll("audio"));
     let keyState = {};
 
     function removeTransition(e) {
@@ -19,7 +20,8 @@ export default function Drumkit() {
       } else if (
         e.type === "mousedown" ||
         e.type === "mouseup" ||
-        e.type === "mouseleave"
+        e.type === "mouseleave" ||
+        e.type === "touchstart"
       ) {
         keyCode = e.target.dataset.key;
       } else {
@@ -31,17 +33,21 @@ export default function Drumkit() {
       if (!audio) return;
 
       if (
-        (e.type === "keydown" || e.type === "mousedown") &&
+        (e.type === "keydown" || e.type === "mousedown" || e.type === "touchstart") &&
         !keyState[keyCode]
       ) {
         keyState[keyCode] = true;
         key.classList.add("playing");
         audio.currentTime = 0;
-        audio.play();
+        setTimeout(() => {
+          audio.play();
+        }, 2);
+        // audio.play();
       } else if (
         e.type === "keyup" ||
         e.type === "mouseup" ||
-        e.type === "mouseleave"
+        e.type === "mouseleave" ||
+        e.type === "touchend"
       ) {
         delete keyState[keyCode];
         key.classList.remove("playing");
@@ -62,6 +68,9 @@ export default function Drumkit() {
     window.addEventListener("keydown", playSound);
     window.addEventListener("keyup", playSound);
 
+    const keysContainer = keysContainerRef.current;
+    keysContainer.addEventListener("touchstart", playSound);
+
     return () => {
       keys.forEach((key) => {
         key.removeEventListener("transitionend", removeTransition);
@@ -71,12 +80,13 @@ export default function Drumkit() {
       });
       window.removeEventListener("keydown", playSound);
       window.removeEventListener("keyup", playSound);
+      keysContainer.removeEventListener("touchstart", playSound);
     };
   }, []);
 
   return (
     <div className="drumkit">
-      <div className="keys">
+      <div className="keys" ref={keysContainerRef}>
         <div data-key="65" className="key" id="clap">
           <kbd>A</kbd>
           <span className="sound">clap</span>
@@ -115,7 +125,7 @@ export default function Drumkit() {
         </div>
       </div>
 
-      <div className="keys">
+      <div className="keys" ref={keysContainerRef}>
         <div data-key="66" className="key tune" id="babyshark">
           <kbd>B</kbd>
           <span className="sound">babyshark</span>

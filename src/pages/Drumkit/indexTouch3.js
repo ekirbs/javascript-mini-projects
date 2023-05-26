@@ -1,14 +1,15 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import "./style.css";
 
 export default function Drumkit() {
+  const keysContainerRef = useRef(null);
+
   useEffect(() => {
     const keys = Array.from(document.querySelectorAll(".key"));
-    // const audioElements = Array.from(document.querySelectorAll("audio"));
     let keyState = {};
 
-    function removeTransition(e) {
-      if (e.propertyName !== "transform") return;
+    function removeAnimation(e) {
+      if (e.animationName !== "playing") return;
       e.target.classList.remove("playing");
     }
 
@@ -16,11 +17,7 @@ export default function Drumkit() {
       let keyCode;
       if (e.type === "keydown" || e.type === "keyup") {
         keyCode = e.keyCode.toString();
-      } else if (
-        e.type === "mousedown" ||
-        e.type === "mouseup" ||
-        e.type === "mouseleave"
-      ) {
+      } else if (e.type === "touchstart" || e.type === "touchend") {
         keyCode = e.target.dataset.key;
       } else {
         return;
@@ -31,18 +28,16 @@ export default function Drumkit() {
       if (!audio) return;
 
       if (
-        (e.type === "keydown" || e.type === "mousedown") &&
+        (e.type === "keydown" || e.type === "touchstart") &&
         !keyState[keyCode]
       ) {
         keyState[keyCode] = true;
         key.classList.add("playing");
         audio.currentTime = 0;
-        audio.play();
-      } else if (
-        e.type === "keyup" ||
-        e.type === "mouseup" ||
-        e.type === "mouseleave"
-      ) {
+        setTimeout(() => {
+          audio.play();
+        }, 2);
+      } else if (e.type === "keyup" || e.type === "touchend") {
         delete keyState[keyCode];
         key.classList.remove("playing");
         audio.pause();
@@ -53,30 +48,32 @@ export default function Drumkit() {
     }
 
     keys.forEach((key) => {
-      key.addEventListener("transitionend", removeTransition);
-      key.addEventListener("mouseup", playSound);
-      key.addEventListener("mouseleave", playSound);
-      key.addEventListener("mousedown", playSound);
+      key.addEventListener("animationend", removeAnimation);
+      key.addEventListener("touchstart", playSound);
+      key.addEventListener("touchend", playSound);
     });
 
     window.addEventListener("keydown", playSound);
     window.addEventListener("keyup", playSound);
 
+    const keysContainer = keysContainerRef.current;
+    keysContainer.addEventListener("touchstart", playSound);
+
     return () => {
       keys.forEach((key) => {
-        key.removeEventListener("transitionend", removeTransition);
-        key.removeEventListener("mouseup", playSound);
-        key.removeEventListener("mouseleave", playSound);
-        key.removeEventListener("mousedown", playSound);
+        key.removeEventListener("animationend", removeAnimation);
+        key.removeEventListener("touchstart", playSound);
+        key.removeEventListener("touchend", playSound);
       });
       window.removeEventListener("keydown", playSound);
       window.removeEventListener("keyup", playSound);
+      keysContainer.removeEventListener("touchstart", playSound);
     };
   }, []);
 
   return (
     <div className="drumkit">
-      <div className="keys">
+      <div className="keys" ref={keysContainerRef}>
         <div data-key="65" className="key" id="clap">
           <kbd>A</kbd>
           <span className="sound">clap</span>

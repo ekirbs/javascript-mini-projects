@@ -226,3 +226,128 @@ export default function Drumkit() {
     </div>
   );
 }
+
+// || ALT PLAYSOUND FUNCTION
+// function playSound(e) {
+//   let keyCode;
+//   if (e.type === "keydown" || e.type === "keyup") {
+//     keyCode = e.keyCode.toString();
+//   } else if (
+//     e.type === "mousedown" ||
+//     e.type === "mouseup" ||
+//     e.type === "mouseleave"
+//   ) {
+//     keyCode = e.target.dataset.key;
+//   } else {
+//     return;
+//   }
+
+//   const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+//   const key = document.querySelector(`div[data-key="${keyCode}"]`);
+//   if (!audio) return;
+
+//   if (
+//     (e.type === "keydown" || e.type === "mousedown") &&
+//     !keyState[keyCode]
+//   ) {
+//     keyState[keyCode] = true;
+//     key.classList.add("playing");
+//     if (keyCode === "71" && !audio.paused) {
+//       audio.pause();
+//       audio.currentTime = 0;
+//     }
+//     audio.currentTime = 0;
+//     audio.play();
+//   } else if (
+//     e.type === "keyup" ||
+//     e.type === "mouseup" ||
+//     e.type === "mouseleave"
+//   ) {
+//     delete keyState[keyCode];
+//     key.classList.remove("playing");
+//     if (keyCode === "71" && !audio.paused) {
+//       const boomSound = new Audio("/assets/sounds/percussion/boom.wav");
+//       boomSound.addEventListener("ended", function () {
+//         audio.pause();
+//         audio.currentTime = 0;
+//       });
+//       boomSound.play();
+//     // if (keyCode === "71") {
+//     //   if (!audio.paused) {
+//     //     const boomSound = new Audio("/assets/sounds/percussion/boom.wav");
+//     //     boomSound.pause();
+//     //     boomSound.currentTime = 0;
+//     //     // audio.stop();
+//     //   }
+//     //   audio.currentTime = 0;
+//     } else {
+//       audio.pause();
+//       audio.currentTime = 0;
+//     }
+
+//     // audio.pause();
+//     // // audio.currentTime = 0;
+//     // setTimeout(() => {
+//     //   audio.currentTime = 0;
+//     // }, 2);
+//   }
+// }
+
+// || EXTRA INSURANCE
+// if (keyCode === "71" && !audio.paused) {
+//   audio.pause();
+//   audio.currentTime = 0;
+// }
+
+// || ANOTHER GO
+    // function playSound(e) {
+    //   let keyCode;
+    //   if (e.type === "keydown" || e.type === "keyup") {
+    //     keyCode = e.keyCode.toString();
+    //   } else if (e.type === "mousedown" || e.type === "touchstart") {
+    //     keyCode = e.target.dataset.key;
+    //   } else if (e.type === "mouseup" || e.type === "mouseleave" || e.type === "touchend") {
+    //     keyCode = e.changedTouches[0].target.dataset.key;
+    //     e.preventDefault();
+    //   } else {
+    //     return;
+    //   }
+    
+    //   const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+    //   const key = document.querySelector(`div[data-key="${keyCode}"]`);
+    //   if (!audio || !key) return;
+    
+    //   if (
+    //     (e.type === "keydown" || e.type === "mousedown" || e.type === "touchstart") &&
+    //     !keyState[keyCode]
+    //   ) {
+    //     keyState[keyCode] = true;
+    //     key.classList.add("playing");
+    //     audio.currentTime = 0;
+    
+    //     const playPromise = audio.play();
+    //     if (playPromise !== undefined) {
+    //       playPromise
+    //         .then(() => {
+    //           // Playback started successfully
+    //         })
+    //         .catch((error) => {
+    //           if (error.name === "AbortError") {
+    //             // Ignore the error caused by the play/pause interruption
+    //           } else {
+    //             console.error("Error playing audio:", error);
+    //           }
+    //         });
+    //     }
+    //   } else if (
+    //     (e.type === "keyup" || e.type === "mouseup" || e.type === "mouseleave" || e.type === "touchend") &&
+    //     keyState[keyCode]
+    //   ) {
+    //     delete keyState[keyCode];
+    //     key.classList.remove("playing");
+    //     audio.pause();
+    //     setTimeout(() => {
+    //       audio.currentTime = 0;
+    //     }, 2);
+    //   }
+    // }

@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import "./style.css";
 
 export default function Drumkit() {
-
   useEffect(() => {
     const keys = Array.from(document.querySelectorAll(".key"));
     let keyState = {}; // Track the state of each key
+    const audioElements = Array.from(document.querySelectorAll("audio"));
 
     function removeTransition(e) {
       if (e.propertyName !== "transform") return;
@@ -25,12 +25,14 @@ export default function Drumkit() {
       } else if (e.type === "keyup") {
         delete keyState[e.keyCode];
         key.classList.remove("playing");
+        audio.pause();
       }
     }
 
     function removePlayingClass() {
       keys.forEach((key) => key.classList.remove("playing"));
       keyState = {};
+      audioElements.forEach((audio) => audio.pause());
     }
 
     keys.forEach((key) => {
@@ -46,7 +48,6 @@ export default function Drumkit() {
         key.removeEventListener("transitionend", removeTransition);
         key.removeEventListener("keyup", removePlayingClass);
       });
-      
       window.removeEventListener("keydown", playSound);
       window.removeEventListener("keyup", playSound);
     };
@@ -93,6 +94,29 @@ export default function Drumkit() {
         </div>
       </div>
 
+      <div class="keys">
+        <div data-key="66" class="key tune" id="babyshark">
+          <kbd>B</kbd>
+          <span class="sound">babyshark</span>
+        </div>
+        <div data-key="77" class="key tune" id="monkeyshark">
+          <kbd>M</kbd>
+          <span class="sound">monkeyshark</span>
+        </div>
+        <div data-key="49" class="key tune" id="countdown">
+          <kbd>1</kbd>
+          <span class="sound">countdown</span>
+        </div>
+        <div data-key="50" class="key tune" id="gameover">
+          <kbd>2</kbd>
+          <span class="sound">gameover</span>
+        </div>
+        <div data-key="51" class="key tune" id="positive">
+          <kbd>3</kbd>
+          <span class="sound">positive</span>
+        </div>
+      </div>
+
       <audio data-key="65" src="/assets/sounds/percussion/clap.wav"></audio>
       <audio data-key="83" src="/assets/sounds/percussion/hihat.wav"></audio>
       <audio data-key="68" src="/assets/sounds/percussion/kick.wav"></audio>
@@ -102,6 +126,12 @@ export default function Drumkit() {
       <audio data-key="74" src="/assets/sounds/percussion/snare.wav"></audio>
       <audio data-key="75" src="/assets/sounds/percussion/tom.wav"></audio>
       <audio data-key="76" src="/assets/sounds/percussion/tink.wav"></audio>
+
+      <audio data-key="66" src="./assets/sounds/tunes/babyshark_acoustic.mp3"></audio>
+      <audio data-key="77" src="./assets/sounds/tunes/monkeyshark.mp3"></audio>
+      <audio data-key="49" src="./assets/sounds/tunes/happy_countdown.wav"></audio>
+      <audio data-key="50" src="./assets/sounds/tunes/fun_gameover.wav"></audio>
+      <audio data-key="51" src="./assets/sounds/tunes/positive_sound.wav"></audio>
     </div>
   );
 }
