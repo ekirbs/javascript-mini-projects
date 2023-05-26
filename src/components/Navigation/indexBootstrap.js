@@ -16,6 +16,10 @@ export default function Navigation() {
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <NavDropdown title="Projects" id="collasible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/drumkit">Drumkit</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/clock">Clock</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <p>more to come!</p>
             </NavDropdown>
           </Nav>
           <Nav>
@@ -37,7 +41,7 @@ export default function Navigation() {
 //           <Nav className="me-auto">
 //             <Nav.Link href="#home">Home</Nav.Link>
 //             <NavDropdown title="Projects" id="collasible-nav-dropdown">
-//               <NavDropdown.Item href="#project1">Project 1</NavDropdown.Item>
+//               <NavDropdown.Item href="#drunkit">Drumkit</NavDropdown.Item>
 //             </NavDropdown>
 //           </Nav>
 //           <Nav>

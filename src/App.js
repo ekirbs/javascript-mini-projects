@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Navigation, Footer } from "./components";
-import { Home, Drumkit, Contact } from "./pages";
+import { Home, Drumkit, Contact, Clock } from "./pages";
 import './App.css';
 
 export default function App() {
@@ -14,6 +14,7 @@ export default function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/drumkit" element={<Drumkit />} />
+          <Route path="/clock" element={<Clock />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
