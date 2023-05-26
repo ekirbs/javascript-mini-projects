@@ -19,7 +19,7 @@ export default function Navigation() {
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/clock">Clock</NavDropdown.Item>
               <NavDropdown.Divider />
-              <p>more to come!</p>
+              <NavDropdown.Item>more to come!</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
