@@ -51,7 +51,7 @@ export default function Clock() {
   return (
     <div className="clock-page">
       {/* <h6>This is the clock page.</h6> */}
-      <h1>Current Time: {currentTime}</h1>
+      <h1 className="clock-time">Current Time: {currentTime}</h1>
       <div id="clock" className="clock">
         <div className="clock-face">
         <div className="clock-circle"></div>
