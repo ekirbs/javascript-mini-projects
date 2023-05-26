@@ -1,7 +1,22 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./style.css";
 
 export default function Clock() {
+
+  const [currentTime, setCurrentTime] = useState('');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const date = new Date();
+      const formattedTime = date.toLocaleTimeString('en-US');
+      setCurrentTime(formattedTime);
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   const secondHandRef = useRef(null);
   const minsHandRef = useRef(null);
   const hourHandRef = useRef(null);
@@ -35,9 +50,11 @@ export default function Clock() {
 
   return (
     <div className="clock-page">
-      <h6>This is the clock page.</h6>
+      {/* <h6>This is the clock page.</h6> */}
+      <h1>Current Time: {currentTime}</h1>
       <div id="clock" className="clock">
         <div className="clock-face">
+        <div className="clock-circle"></div>
           <div className="number number1">1</div>
           <div className="number number2">2</div>
           <div className="number number3">3</div>
