@@ -33,7 +33,7 @@ export default function ViewCounter() {
     if (count) {
       count = Number(count) + 1;
     } else {
-      count = 0;
+      count = 1;
     }
     localStorage.setItem("local_page_view", count);
     setLocalVisitCount(count);
@@ -41,6 +41,7 @@ export default function ViewCounter() {
 
   const handleLocalReset = () => {
     localStorage.setItem("local_page_view", "1");
+    setLocalVisitCount(1);
   };
 
   return (
