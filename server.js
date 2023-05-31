@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require("path");
+// const appRoutes = require('./src/appRoutes');
 // const soundRoutes = require('./routes/soundRoutes');
 
 
@@ -17,8 +18,9 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-// app.use(express.static(path.join(__dirname, 'build'))); // Serve the built React files
+app.use(express.static(path.join(__dirname, 'build'))); // Serve the built React files
 
+// app.use('/', appRoutes);
 // app.use("/sound", soundRoutes);
 // app.use("/", htmlRoutes);
 
@@ -34,10 +36,10 @@ app.post("/counter", (req, res) => {
   res.json({ count: viewCount });
 });
 
-// // SERVE REACT APP
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-// });
+// SERVE REACT APP
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 // app.use(routes);
 

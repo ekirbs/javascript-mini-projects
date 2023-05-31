@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./style.css";
+import "./camera.css";
 
 export default function Camera() {
   const videoRef = useRef(null);

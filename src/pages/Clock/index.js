@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import "./style.css";
+import "./clock.css";
 
 export default function Clock() {
 

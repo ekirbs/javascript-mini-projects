@@ -1,20 +1,20 @@
 import { useEffect, useState } from "react";
-import "./style.css";
+import "./viewcounter.css";
 
 export default function ViewCounter() {
-  const [globalVisitCount, setGlobalVisitCount] = useState(0);
+  // const [globalVisitCount, setGlobalVisitCount] = useState(0);
   const [localVisitCount, setLocalVisitCount] = useState(0);
 
-  useEffect(() => {
-    fetch("/counter")
-      .then((response) => response.json())
-      .then((data) => {
-        setGlobalVisitCount(data.count);
-      })
-      .catch((error) => {
-        console.error("Error fetching global visit count:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch("/counter")
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setGlobalVisitCount(data.count);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching global visit count:", error);
+  //     });
+  // }, []);
 
   // const handleGlobalReset = () => {
   //   fetch("/counter", { method: "POST" })
@@ -32,9 +32,8 @@ export default function ViewCounter() {
 
     if (count) {
       count = Number(count) + 1;
-      // localStorage.setItem("local_page_view", localVisitCount);
     } else {
-      count = 1;
+      count = 0;
     }
     localStorage.setItem("local_page_view", count);
     setLocalVisitCount(count);
@@ -46,14 +45,14 @@ export default function ViewCounter() {
 
   return (
     <div id="view-counter" className="view-counter">
-
+{/* 
       <div>Website global visit count:</div>
-      <div className="global-website-counter">{globalVisitCount}</div>
+      <div className="global-website-counter">{globalVisitCount}</div> */}
       {/* <button id="global-reset" onClick={handleGlobalReset}>Reset Global Counter</button> */}
 
       <div>Website local visit count:</div>
-      <div className="local_website-counter">{localVisitCount}</div>
-      <button id="local_reset" onClick={handleLocalReset}>Reset Local Counter</button>
+      <div className="local-website-counter">{localVisitCount}</div>
+      <button id="local-reset" onClick={handleLocalReset}>Reset Local Counter</button>
 
     </div>
   );

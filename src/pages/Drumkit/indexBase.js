@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./style.css";
+import "./drumkit.css";
 
 export default function Drumkit() {
   useEffect(() => {

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./style.css";
+import "./drumkit.css";
 
 export default function Drumkit() {
   const keysContainerRef = useRef(null);

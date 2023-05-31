@@ -1,5 +1,5 @@
 import {RobotConfused} from "../../assets/images"
-import "./style.css";
+import "./notfound.css";
 
 export default function NotFound() {
 

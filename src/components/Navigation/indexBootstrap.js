@@ -21,6 +21,8 @@ export default function Navigation() {
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/camera">Video</NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/viewcounter">View Counter</NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item>more to come!</NavDropdown.Item>
             </NavDropdown>
           </Nav>
