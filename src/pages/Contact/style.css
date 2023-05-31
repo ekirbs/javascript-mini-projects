@@ -1,6 +1,6 @@
 .contact {
   width: 100vw;
-  height: 60vh;
+  min-height: 60vh;
   background-color: aqua;
   display: flex;
   justify-content: center;
