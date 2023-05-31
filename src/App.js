@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Navigation, Footer } from "./components";
-import { NotFound, Home, Drumkit, Contact, Clock, Camera, ViewCounter } from "./pages";
+import { NotFound, Home, Drumkit, Contact, Clock, Camera, ViewCounter, VariableStyle } from "./pages";
 import './App.css';
 
 export default function App() {
@@ -17,6 +17,7 @@ export default function App() {
           <Route path="/clock" element={<Clock />} />
           <Route path="/camera" element={<Camera />} />
           <Route path="/viewcounter" element={<ViewCounter />} />
+          <Route path="/variablestyle" element={<VariableStyle />} />
           <Route path="/contact" element={<Contact />} />
           <Route element={<NotFound />} />
         </Routes>
