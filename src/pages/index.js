@@ -1,4 +1,5 @@
 export { default as Home } from "./Home";
+export { default as Buttons } from "./Buttons";
 export { default as Drumkit } from "./Drumkit/indexTouch";
 export { default as Clock } from "./Clock";
 export { default as Camera } from "./Camera";
