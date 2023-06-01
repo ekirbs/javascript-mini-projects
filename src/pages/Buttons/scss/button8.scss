@@ -1,6 +1,6 @@
-html, body { height: 100%; }
-
-body {
+.button-8 { 
+  height: 100%;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,133 @@ body {
   src: url('https://bennettfeely.com/fonts/icons.woff');
 }
 
-@include flip-cover("dribbble", "d", #FC1786);
-@include flip-cover("twiter", "t", #2EC8FA);
-@include flip-cover("linkedin", "in", #2672ae);
-@include flip-cover("email", "g", #f80);
+// @include flip-cover("dribbble", "d", #FC1786);
+// @include flip-cover("twiter", "t", #2EC8FA);
+// @include flip-cover("linkedin", "in", #2672ae);
+// @include flip-cover("email", "g", #f80);
+
+.flip-cover {
+  width: 80px;
+  height: 120px;
+  perspective: 800px;
+  margin-bottom: 10px;
+
+  &-section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: right;
+    transition: transform 0.5s;
+    transform: rotateY(0deg);
+    cursor: pointer;
+
+    &:hover {
+      transform: rotateY(-90deg);
+    }
+  }
+
+  &-button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    backface-visibility: hidden;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  &-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+  }
+
+  &-outer,
+  &-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: transparent;
+    backface-visibility: hidden;
+  }
+
+  &-outer:after,
+  &-inner:after {
+    content: "";
+    display: block;
+  }
+
+  &-dribbble-section {
+    .flip-cover-button {
+      background-color: #fc1786;
+    }
+
+    .flip-cover-outer {
+      background-color: #fc1786;
+    }
+
+    .flip-cover-inner {
+      background-color: #fc1786;
+    }
+  }
+
+  &-twitter-section {
+    .flip-cover-button {
+      background-color: #2ec8fa;
+    }
+
+    .flip-cover-outer {
+      background-color: #2ec8fa;
+    }
+
+    .flip-cover-inner {
+      background-color: #2ec8fa;
+    }
+  }
+
+  &-linkedin-section {
+    .flip-cover-button {
+      background-color: #2672ae;
+    }
+
+    .flip-cover-outer {
+      background-color: #2672ae;
+    }
+
+    .flip-cover-inner {
+      background-color: #2672ae;
+    }
+  }
+
+  &-email-section {
+    .flip-cover-button {
+      background-color: #f80;
+    }
+
+    .flip-cover-outer {
+      background-color: #f80;
+    }
+
+    .flip-cover-inner {
+      background-color: #f80;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@import "compass/css3";
+// @import "compass/css3";
 
 $dark: #20826c;
 $light: #fff;
@@ -8,17 +8,25 @@ $border: 2px;
 $hover-size: $spacing * 2 - $border * 2;
 $hover-margin: -38px;
 
+@mixin border-radius($value) {
+  border-radius: $value;
+}
+
+@mixin transition($property, $duration) {
+  transition: $property $duration;
+}
+
 /*
  * These hover-margin's don't work for some reason
  * 0 - $spacing - $border
  * ($spacing + $border) * -1
 */
 
-body { background-color: $dark; }
+.button-1 { background-color: $dark; }
 
-nav { padding: $spacing; }
+.button1-nav { padding: $spacing; }
 
-nav li {
+.button1-nav li {
   float: left;
   font-size: 2em;
   margin-right: $spacing;
@@ -36,7 +44,7 @@ nav li {
     width: $spacing * 2;
     
     @include border-radius(50%);
-    @include transition(color 0.1s);
+    @include transition(color, 0.1s);
 
     i {
       position: relative;
@@ -54,7 +62,7 @@ nav li {
       width: 0;
   
       @include border-radius(50%);
-      @include transition(all 0.1s);
+      @include transition(all, 0.1s);
     }
 
     &:hover {

@@ -8,9 +8,9 @@ export default function Button3() {
 
 {/* BUTTON SYSTEM 3 */}
 
-      <div className="buttonContainer">
+      <div className="button-container">
         <h1>Just a fancy button...</h1>
-        <a href="#" className="button" title="Yes, turtles.">
+        <a href="#" className="button3" title="Yes, turtles.">
           I like turtles!
         </a>
       </div>

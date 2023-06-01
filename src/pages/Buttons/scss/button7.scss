@@ -1,7 +1,16 @@
-body {
+.button-7 {
   font-family: sans-serif;
   background-color: #81d4fa;
   font-weight: bold;
+
+  // ADDED
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
 }
 
 .text-box {
@@ -9,8 +18,8 @@ body {
  margin-top: 42vh;
 }
 
-.btn:link,
-.btn:visited {
+.btn7:link,
+.btn7:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -20,12 +29,12 @@ body {
   position: absolute;
 }
 
-.btn:hover {
+.btn7:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
+.btn7:active {
   transform: translateY(-1px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
@@ -35,7 +44,7 @@ body {
   color: #777;
 }
 
-.btn::after {
+.btn7::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -52,7 +61,7 @@ body {
   background-color: #fff;
 }
 
-.btn:hover::after {
+.btn7:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }

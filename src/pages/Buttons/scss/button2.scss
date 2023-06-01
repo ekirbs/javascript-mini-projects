@@ -1,4 +1,4 @@
-@import "compass/css3";
+// @import "compass/css3";
 
 $blue: #108FE8;
 $yellow: #FFC334;
@@ -21,18 +21,22 @@ $green: #0EC518;
    }
 }
 
-body {
+.button-2 {
   background: none repeat scroll 0 0 #71AFDF;
   text-align: center;
   margin-top: 50px;
 }
 
-span {
+.color-buttons span {
   margin: 0 10px;
 }
 
 .btn-blue {
   @include round-button;
+
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 }
 .btn-red {
   @include round-button($red);
@@ -43,3 +47,9 @@ span {
 .btn-yellow {
   @include round-button($yellow);
 }
+
+// ADDED 
+
+// .navigationA span {
+//   margin: 0 10px;
+// }

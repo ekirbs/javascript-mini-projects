@@ -8,7 +8,7 @@ export default function Button6() {
 
 {/* BUTTON SYSTEM 6 */}
 
-      <div className="buttons6">
+      <div className="button6">
         <button className="blob-btn">
           Blob Button
           <span className="blob-btn__inner">

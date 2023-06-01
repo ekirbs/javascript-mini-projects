@@ -9,41 +9,41 @@ export default function Button1() {
 
 {/* BUTTON SYSTEM 1 */}
 
-      <nav role="navigation" className="navigation">
+      <nav role="navigation" className="button1-nav">
         <ul>
           <li>
-            <a href="#" className="navigationA">
+            <a href="#">
               <span className="inner"></span>
-              {/* <FaHome className="react-icon" /> */}
-              <i className="icon-home"></i>
+              <FaHome className="react-icon" />
+              {/* <i className="icon-home"></i> */}
             </a>
           </li>
           <li>
-            <a href="#" className="navigationA">
+            <a href="#">
               <span className="inner"></span>
-              {/* <FaHtml5 className="react-icon" /> */}
-              <i className="icon-html5"></i>
+              <FaHtml5 className="react-icon" />
+              {/* <i className="icon-html5"></i> */}
             </a>
           </li>
           <li>
-            <a href="#" className="navigationA">
+            <a href="#">
               <span className="inner"></span>
-              {/* <FaCss3 className="react-icon" /> */}
-              <i className="icon-css3"></i>
+              <FaCss3 className="react-icon" />
+              {/* <i className="icon-css3"></i> */}
             </a>
           </li>
           <li>
-            <a href="#" className="navigationA">
+            <a href="#">
               <span className="inner"></span>
-              {/* <FaStackExchange className="react-icon" /> */}
-              <i className="icon-stackexchange"></i>
+              <FaStackExchange className="react-icon" />
+              {/* <i className="icon-stackexchange"></i> */}
             </a>
           </li>
           <li>
-            <a href="#" className="navigationA">
+            <a href="#">
               <span className="inner"></span>
-              {/* <FaGithub className="react-icon" /> */}
-              <i className="icon-github"></i>
+              <FaGithub className="react-icon" />
+              {/* <i className="icon-github"></i> */}
             </a>
           </li>
         </ul>

@@ -1,4 +1,4 @@
-import "../scss/button9.css";
+import "../css/button9.css";
 
 export default function Button9() {
 
@@ -8,7 +8,7 @@ export default function Button9() {
 
 {/* BUTTON SYSTEM 9 */}
 
-      <div class="wrap">
+      <div class="wrap-9">
         <button class="button9">Submit</button>
       </div>
 

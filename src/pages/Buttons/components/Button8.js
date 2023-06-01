@@ -115,10 +115,10 @@ export default function Button8() {
     <div id="button-8" className="button-8">
       <h6>This is the Button # 8 component.</h6>
 
-      <div className="flip-cover-dribbble"></div>
-      <div className="flip-cover-twiter"></div>
-      <div className="flip-cover-linkedin"></div>
-      <div className="flip-cover-email"></div>
+      <div className="flip-cover flip-cover-dribbble"></div>
+      <div className="flip-cover flip-cover-twiter"></div>
+      <div className="flip-cover flip-cover-linkedin"></div>
+      <div className="flip-cover flip-cover-email"></div>
 
     </div>
   );

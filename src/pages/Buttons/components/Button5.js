@@ -8,12 +8,12 @@ export default function Button5() {
 
 {/* BUTTON SYSTEM 5 */}
 
-      <div className="slideButtonContainer">
+      <div className="slide-container">
         <h1 className="slideButtonHeader">Pure Css Button Hover Effect</h1>
 
-        <a href="#" className="slideButton">Hover Over Me</a>
+        <a href="#" className="slide-button">Hover Over Me</a>
 
-        <span className="slideButtonSpan">
+        <span className="slide-span">
           Credit:
           <a href="http://alticreation.com/en" className="slideButtonA">alticreation.com</a>
         </span>

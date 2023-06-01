@@ -8,9 +8,9 @@ export default function Button1() {
 
 {/* BUTTON SYSTEM 7 */}
 
-      <div className="system7div">
+      <div className="button-7-div">
         <div className="text-box">
-            <a href="#" className="btn btn-white btn-animate">click me</a>
+            <a href="#" className="btn7 btn btn-white btn-animate">click me</a>
         </div>
       </div>
 

@@ -1,15 +1,15 @@
-html, body {
+.button-9 {
   height: 100%;
 }
 
-.wrap {
+.wrap-9 {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.button {
+.button9 {
   min-width: 300px;
   min-height: 60px;
   font-family: 'Nunito', sans-serif;
@@ -30,7 +30,7 @@ background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 10
   padding: 10px;
   }
 
-button::before {
+.button9::before {
 content: '';
   border-radius: 1000px;
   min-width: calc(300px + 12px);
@@ -45,16 +45,16 @@ content: '';
   transition: all .3s ease-in-out 0s;
 }
 
-.button:hover, .button:focus {
+.button9:hover, .button9:focus {
   color: #313133;
   transform: translateY(-6px);
 }
 
-button:hover::before, button:focus::before {
+.button9:hover::before, .button9:focus::before {
   opacity: 1;
 }
 
-button::after {
+.button9::after {
   content: '';
   width: 30px; height: 30px;
   border-radius: 100%;
@@ -67,7 +67,7 @@ button::after {
   animation: ring 1.5s infinite;
 }
 
-button:hover::after, button:focus::after {
+.button9:hover::after, .button9:focus::after {
   animation: none;
   display: none;
 }
