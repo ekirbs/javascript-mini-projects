@@ -9,6 +9,11 @@
   --bisque: bisque;
   --clockOffWhite: #EFEFEF;
   --seaBlue: #018DED;
+
+  /* VARIABLE SPACING ROOT */
+  --base: #ffc600;
+  --spacing: 10px;
+  --blur: 10px;
 }
 
 body {

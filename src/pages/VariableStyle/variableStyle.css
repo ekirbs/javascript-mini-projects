@@ -1,8 +1,48 @@
-.contact {
+.variable-style {
   width: 100vw;
   min-height: 60vh;
-  background-color: khaki;
+  /* background-color: khaki; */
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  text-align: center;
+  background: #193549;
+  color: white;
+  font-family: 'helvetica neue', sans-serif;
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.variable-header {
+  margin-top: 2vh;
+}
+
+.var-img {
+  padding: var(--spacing);
+  background: var(--base);
+  filter: blur(var(--blur));
+  margin-bottom: 10vh;
+  }
+
+.hl {
+  color: var(--base);
+}
+
+/*
+  misc styles, nothing to do with CSS variables
+*/
+
+.controls {
+  margin-bottom: 50px;
+}
+
+.var-label,
+.var-input {
+  margin: 2vh;
+}
+
+.var-input {
+  width: 100px;
 }
