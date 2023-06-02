@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Navigation, Footer } from "./components";
-import { NotFound, Home, Buttons, Drumkit, Contact, Clock, Camera, ViewCounter, VariableStyle } from "./pages";
+import { NotFound, Home, Buttons, Drumkit, Contact, Clock, Camera, ViewCounter, VariableStyle } from "./pages/projects";
 import './App.css';
 
 export default function App() {
