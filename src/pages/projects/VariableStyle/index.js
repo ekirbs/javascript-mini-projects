@@ -3,10 +3,11 @@ import "./variableStyle.css";
 
 export default function VariableStyle() {
   useEffect(() => {
-    const inputs = document.querySelectorAll(".controls input");
+    const inputs = document.querySelectorAll(".controls-top input, .controls-bottom input");
 
     function handleUpdate() {
       const suffix = this.dataset.sizing || "";
+
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
     }
 
@@ -27,7 +28,7 @@ export default function VariableStyle() {
   return (
     <div id="variable-style" className="variable-style">
       <h2 className="variable-header">Update CSS Variables with <span className="hl">JS</span></h2>{" "}
-      <div className="controls">
+      <div className="controls controls-top">
         <label htmlFor="spacing" className="var-label">Spacing:</label>
 
         <input
@@ -48,7 +49,7 @@ export default function VariableStyle() {
           name="blur"
           min="0"
           max="25"
-          defaultValue="10"
+          defaultValue="5"
           data-sizing="px"
           className="var-input"
         ></input>
@@ -68,6 +69,45 @@ export default function VariableStyle() {
         className="var-img"
         alt="Variable Styles"
       ></img>
+
+      <div className="controls controls-bottom">
+        <label htmlFor="contrast" className="var-label">Contrast:</label>
+
+        <input
+          id="contrast"
+          type="range"
+          name="contrast"
+          min="0"
+          max="200"
+          defaultValue="100"
+          data-sizing="%"
+          className="var-input"
+        ></input>
+
+        <label htmlFor="hue-rotate" className="var-label">Hue-Rotate:</label>
+        <input
+          id="hue-rotate"
+          type="range"
+          name="hue-rotate"
+          min="0"
+          max="360"
+          defaultValue="0"
+          data-sizing="deg"
+          className="var-input"
+        ></input>
+
+        <label htmlFor="opacity" className="var-label">Opacity:</label>
+        <input
+          id="opacity"
+          type="range"
+          name="opacity"
+          min="0"
+          max="100"
+          defaultValue="100"
+          data-sizing="%"
+          className="var-input"
+        ></input>
+      </div>
 
     </div>
   );

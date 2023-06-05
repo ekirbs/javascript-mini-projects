@@ -10,10 +10,14 @@
   --clockOffWhite: #EFEFEF;
   --seaBlue: #018DED;
 
-  /* VARIABLE SPACING ROOT */
+  /* VARIABLE STYLING ROOT */
   --base: #ffc600;
   --spacing: 10px;
   --blur: 10px;
+
+  --contrast: 1;
+  --hue-rotate: 0deg;
+  --opacity: 1;
 }
 
 body {
