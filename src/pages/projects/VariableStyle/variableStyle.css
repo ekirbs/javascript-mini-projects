@@ -8,8 +8,8 @@
   flex-direction: column;
 
   text-align: center;
-  background: #193549;
-  color: white;
+  background: var(--darkNavy);
+  color: var(--white);
   font-family: 'helvetica neue', sans-serif;
   font-weight: 100;
   font-size: 50px;

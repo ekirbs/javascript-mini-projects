@@ -3,7 +3,7 @@ import "./variableStyle.css";
 
 export default function VariableStyle() {
   useEffect(() => {
-    const inputs = document.querySelectorAll(".controls-top input, .controls-bottom input");
+    const inputs = document.querySelectorAll(".controls input");
 
     function handleUpdate() {
       const suffix = this.dataset.sizing || "";
@@ -84,7 +84,7 @@ export default function VariableStyle() {
           className="var-input"
         ></input>
 
-        <label htmlFor="hue-rotate" className="var-label">Hue-Rotate:</label>
+        <label htmlFor="hue-rotate" className="var-label">Hue:</label>
         <input
           id="hue-rotate"
           type="range"
