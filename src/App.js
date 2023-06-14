@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Navigation, Footer } from "./components";
 import { Home, Contact, NotFound } from "./pages";
-import { Buttons, Drumkit, Clock, Camera, ViewCounter, VariableStyle } from "./pages/projects";
+import { Buttons, Drumkit, Guitar, Clock, Camera, ViewCounter, VariableStyle } from "./pages/projects";
 import './App.css';
 
 export default function App() {
@@ -16,6 +16,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/buttons" element={<Buttons />} />
           <Route path="/drumkit" element={<Drumkit />} />
+          <Route path="/guitar" element={<Guitar />} />
           <Route path="/clock" element={<Clock />} />
           <Route path="/camera" element={<Camera />} />
           <Route path="/viewcounter" element={<ViewCounter />} />

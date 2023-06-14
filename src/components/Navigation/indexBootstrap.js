@@ -17,6 +17,8 @@ export default function Navigation() {
             <NavDropdown title="Projects" id="collasible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/drumkit">Drumkit</NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/guitar">Guitar</NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/clock">Clock</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/camera">Video</NavDropdown.Item>
