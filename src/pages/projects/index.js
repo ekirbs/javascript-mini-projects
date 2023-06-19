@@ -4,3 +4,4 @@ export { default as Clock } from "./Clock";
 export { default as Drumkit } from "./Drumkit/indexTouch";
 export { default as VariableStyle } from "./VariableStyle";
 export { default as ViewCounter } from "./ViewCounter";
+export { default as Vpn } from "./Vpn";

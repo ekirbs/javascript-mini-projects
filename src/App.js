@@ -2,7 +2,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header, Navigation, Footer } from "./components";
 import { Home, Contact, NotFound } from "./pages";
-import { Buttons, Drumkit, Guitar, Clock, Camera, ViewCounter, VariableStyle } from "./pages/projects";
+import { Buttons, Drumkit, Guitar, Clock, Camera, ViewCounter, VariableStyle, Vpn } from "./pages/projects";
 import './App.css';
 
 export default function App() {
@@ -21,6 +21,7 @@ export default function App() {
           <Route path="/camera" element={<Camera />} />
           <Route path="/viewcounter" element={<ViewCounter />} />
           <Route path="/variablestyle" element={<VariableStyle />} />
+          <Route path="/vpn" element={<Vpn />} />
           <Route path="/contact" element={<Contact />} />
           <Route element={<NotFound />} />
         </Routes>
