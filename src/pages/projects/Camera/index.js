@@ -6,11 +6,11 @@ export default function Camera() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    let videoStream;
+    // let videoStream;
 
     const startVideo = async () => {
       try {
-        videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
+        let videoStream = await navigator.mediaDevices.getUserMedia({ video: true });
         const video = videoRef.current;
         video.srcObject = videoStream;
 

@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+JavaScript Mini Projects
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+A host of mini projects built using javascript, html, css, and sass.  The entire collection is built in a react.js framework for chrome or firefox browser on pc.
 
-In the project directory, you can run:
+Link: [JavaScript Mini Projects](https://ekirbs.github.io/javascript-mini-projects/ 'A collection of javascript-based mini projects built in a react.js framework for chrome or firefox browser on a pc.')
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+N/A
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+Use the projects dropdown in the navigation bar at the top to navigate to different projects.  While there is a full basic framework, including a footer and contact page, there is no content built out yet.  It is simply a framework to house the projects right now.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### ***Current Projects:***
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+| Title            | Description | Image                                                                   |
+| :--------------- | :---------: | ----------------------------------------------------------------------: |
+| Music Player     | A web music player app to listen to chill lofi songs.  The song list is subject to change. | <img src="./public/assets/images/music-player-img.jpg" width="50%">     |
+| Weather Forecast | A weather forecast app using the OpenWeatherMap API.  Search for any city and get a 5-day forecast of the weather.  The information given is subject to change. | <img src="./public/assets/images/weather-forecast-img.jpg" width="50%"> |
+| Google Maps      | A Google global map app using the Google Maps API.  The map display is fully touch-capable.  Search for any location and the map will pinpoint the location.  The functionality is subject to change. | <img src="./public/assets/images/google-maps-img.jpg" width="50%">      |
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Credits
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Credit for some of the projects to the JavaScript 30 program.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Link: [JavaScript 30](https://javascript30.com 'A 30 day vanilla JS coding challenge.')
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+MIT license
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For more information about the MIT license, please refer to [https://choosealicense.com/licenses/mit](https://choosealicense.com/licenses/mit).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Badges
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
