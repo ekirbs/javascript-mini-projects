@@ -15,7 +15,8 @@
 
 .text-box {
   margin-left: 44vw;
- margin-top: 42vh;
+  margin-top: 42vh;
+  position: relative;
 }
 
 .btn7:link,
@@ -26,7 +27,9 @@
   display: inline-block;
   border-radius: 100px;
   transition: all .2s;
-  position: absolute;
+  position: relative;
+  top: -21vh;
+  left: -22vw;
 }
 
 .btn7:hover {

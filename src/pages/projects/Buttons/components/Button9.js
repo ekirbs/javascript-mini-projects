@@ -8,8 +8,8 @@ export default function Button9() {
 
 {/* BUTTON SYSTEM 9 */}
 
-      <div class="wrap-9">
-        <button class="button9">Submit</button>
+      <div className="wrap-9">
+        <button className="button9">Submit</button>
       </div>
 
     </div>
