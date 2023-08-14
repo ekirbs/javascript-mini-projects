@@ -31,6 +31,8 @@ export default function Navigation() {
               <NavDropdown.Divider />
               <NavDropdown.Item as={Link} to="/buttons">Buttons</NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/netflix">Netflix Landing Page</NavDropdown.Item>
+              <NavDropdown.Divider />
               <NavDropdown.Item>more to come!</NavDropdown.Item>
             </NavDropdown>
           </Nav>

@@ -11,6 +11,8 @@
   --seaBlue: #018DED;
   --darkNavy: #193549;
   --ghostWhite: ghostwhite;
+  --netflixRed: #e50914;
+  --netflixDark: #141414;
 
   /* VARIABLE STYLING ROOT */
   --base: #ffc600;
@@ -20,6 +22,12 @@
   --contrast: 1;
   --hue-rotate: 0deg;
   --opacity: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {

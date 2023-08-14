@@ -3,6 +3,7 @@ export { default as Camera } from "./Camera";
 export { default as Clock } from "./Clock";
 export { default as Guitar } from "./Guitar";
 export { default as Drumkit } from "./Drumkit/indexTouch";
+export { default as Netflix } from "./Netflix";
 export { default as VariableStyle } from "./VariableStyle";
 export { default as ViewCounter } from "./ViewCounter";
 export { default as Vpn } from "./Vpn";
